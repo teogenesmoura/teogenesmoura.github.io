@@ -1,0 +1,175 @@
+
+	<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+		<title>
+      Teógenes Moura | GET request with Express JS
+		</title>
+    <meta name="description" content="">
+
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="shortcut icon" href="../favicon.ico">
+
+    <link rel="stylesheet" type="text/css" href="../assets/css/screen.css?v=a5b05a996d">
+    <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i">
+		<link rel="stylesheet" type="text/css" href="../assets/css/highlight/atom-one-dark.css?v=a5b05a996d">
+
+		<script type="text/javascript" src="../assets/js/init.js?v=a5b05a996d"></script>
+		<script type="text/javascript" src="../assets/js/highlight.min.js?v=a5b05a996d"></script>
+    <link rel="canonical" href="index.html">
+    <meta name="referrer" content="no-referrer-when-downgrade">
+    <link rel="amphtml" href="amp/index.html">
+    
+    <meta property="og:site_name" content="Teógenes Moura">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="GET request with Express JS">
+    <meta property="og:description" content="Welcome to my first blog post! Today we'll learn how to run a simple GET request with Node JS and Express JS. Requirements This tutorial was developed in a MacOS Sierra v.10.12.5, so if you're in a different operating system you'll probably need to check node's instructions">
+    <meta property="og:url" content="http://localhost:2368/get-request-with-express-js-2/">
+    <meta property="article:published_time" content="2017-07-07T01:57:40.000Z">
+    <meta property="article:modified_time" content="2017-07-07T01:57:40.000Z">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="GET request with Express JS">
+    <meta name="twitter:description" content="Welcome to my first blog post! Today we'll learn how to run a simple GET request with Node JS and Express JS. Requirements This tutorial was developed in a MacOS Sierra v.10.12.5, so if you're in a different operating system you'll probably need to check node's instructions">
+    <meta name="twitter:url" content="http://localhost:2368/get-request-with-express-js-2/">
+    <meta name="twitter:label1" content="Written by">
+    <meta name="twitter:data1" content="Teógenes Moura">
+    
+    <script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "publisher": {
+        "@type": "Organization",
+        "name": "Teógenes Moura",
+        "logo": "http://localhost:2368/ghost/img/ghosticon.jpg"
+    },
+    "author": {
+        "@type": "Person",
+        "name": "Teógenes Moura",
+        "url": "http://localhost:2368/author/teogenes/",
+        "sameAs": []
+    },
+    "headline": "GET request with Express JS",
+    "url": "http://localhost:2368/get-request-with-express-js-2/",
+    "datePublished": "2017-07-07T01:57:40.000Z",
+    "dateModified": "2017-07-07T01:57:40.000Z",
+    "description": "Welcome to my first blog post! Today we&#x27;ll learn how to run a simple GET request with Node JS and Express JS. Requirements This tutorial was developed in a MacOS Sierra v.10.12.5, so if you&#x27;re in a different operating system you&#x27;ll probably need to check node&#x27;s instructions",
+    "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "http://localhost:2368"
+    }
+}
+    </script>
+
+    <meta name="generator" content="Ghost 0.11">
+    <link rel="alternate" type="application/rss+xml" title="Teógenes Moura" href="../rss/index.html">
+	</head>
+	<body class="post-template">
+
+		<div class="site-wrapper">
+			<div class="sidebar">
+
+
+				<div class="sidebar-section text-header" id="site-header">
+					<a href="../">
+						<h1 class="blog-title">Teógenes Moura</h1>
+					</a>
+				</div>
+
+				<div class="sidebar-section" id="site-description">
+					<p>Thoughts, stories and ideas.</p>
+				</div>
+
+				<div class="sidebar-section" id="site-navigation">
+					<div class="navigation">
+
+	<ul>
+			<li class="nav-home">
+				<a href="../">Home</a>
+			</li>
+	</ul>
+</div>
+
+				</div>
+
+				<div class="sidebar-section" id="site-footer">
+					<p id="copyright">©2017 <a href="../">Teógenes Moura</a></p>
+					<p id="theme-credit">
+						<a href="https://github.com/ianpaschal/revenant">Revenant Theme</a> for <a href="https://ghost.org">Ghost</a>
+					</p>
+				</div>
+
+			</div>
+			<div class="content">
+				
+	<div class="post-full">
+
+		<div class="post-body no-splash">
+			<h1 class="post-title"><a href="index.html">GET request with Express JS</a></h1>
+			<p class="post-author">
+				<a href="../author/teogenes/">Teógenes Moura</a> on
+				<time class="post-date" datetime="2017-07-07">
+					07 July 2017
+				</time>
+			</p>
+
+			<div class="post-content">
+				<p>Welcome to my first blog post! Today we'll learn how to run a simple GET request with Node JS and Express JS.</p>
+
+<h6 id="requirements">Requirements</h6>
+
+<p>This tutorial was developed in a MacOS Sierra v.10.12.5, so if you're in a different operating system you'll probably need to check node's instructions of installing for your specific operating system. Don't worry, they're all pretty straightforward</p>
+
+<h6 id="installingourtools">Installing our tools</h6>
+
+<p>For this tutorial, there are only a few things we'll really need. First of them is Node JS, which is built with Javascript and allows your programs to receive web requests through an <em>http</em> module. <br>
+If you're in a Mac like me, you can go directly to Node's website and get the .pkg from there:</p>
+
+<p><a href="https://nodejs.org/en/download/">Download Node</a></p>
+
+<p>If, for some reason, you're not able to access Node's page there is still the possibility to get it with Homebrew, which is a package manager for Mac OS. For that end, I recommend <a href="https://changelog.com/posts/install-node-js-with-homebrew-on-os-x">this link</a>.</p>
+
+<p>Test Node's installation by typing</p>
+
+<pre><code>node --version  
+</code></pre>
+
+<p>into your terminal. If sucessful, it should return the version of Node your computer is running. At the time of this writing, I have <em>v6.10.3</em>.</p>
+
+<p>In order to responde to web requisitions (in our case, GET ones), we'll install ExpressJS, which is a web framework that runs on top of NodeJS. We could responde to simple HTTP requests with Node itself, but as soon as we need to render templates and do database queries, for example, it becomes a real burden to rely only on Node's syntax.</p>
+
+<pre><code>npm install -g express --save
+</code></pre>
+
+<p>With this command, we're asking NPM (Node Package Manager) to install globally (<em>-g</em>)the module Express and save it to our package.json file(<em>--save</em>). The advantage of installing it globally is that you'll be able to run express from the command line itself, which might be helpful in some cases such as </p>
+
+<p>After that, open up a new file in your favourite editor (I recommend Sublime Text) and type the following lines of code:</p>
+
+<pre><code class="language-javascript">let express = require('express');  
+let app = express();  
+let port = process.env.PORT || 3000;  
+app.get('/', (req,res) =&gt; () {  
+    res.send("request received!");
+});
+
+app.listen(port);  
+console.log("the app is listening on port + " port);  
+</code></pre>
+			</div>
+
+		</div>
+	</div>
+
+			</div>
+    </div>
+
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+    
+    <script type="text/javascript" src="../assets/js/jquery.fitvids.js?v=a5b05a996d"></script>
+		<script>hljs.initHighlightingOnLoad();</script>
+    <!--<script type="text/javascript" src="/assets/js/index.js?v=a5b05a996d"></script>-->
+
+	</body>
