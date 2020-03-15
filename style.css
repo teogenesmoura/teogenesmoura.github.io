@@ -1,0 +1,105 @@
+.fade-in {
+  opacity: 1;
+  animation-name: fadeInOpacity;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-in;
+  animation-duration: 1.5s; }
+
+@keyframes fadeInOpacity {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+.menu {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap; }
+
+nav {
+  position: fixed;
+  width: 100%;
+  margin-top: 2%;
+  text-align: center;
+  margin-bottom: 20px;
+  height: 2rem;
+  display: flex;
+  justify-content: center;
+  font-size: 1.3rem;
+  font-family: 'Open Sans', sans-serif; }
+  nav a {
+    justify-content: center;
+    text-align: center;
+    align-items: center; }
+
+a {
+  margin: 0 10px 0 10px;
+  text-decoration: none;
+  color: black; }
+
+html {
+  height: 100%; }
+
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%; }
+
+.section {
+  background-color: #fffffe;
+  height: 100%; }
+  .section .section-2 .title {
+    display: flex;
+    justify-content: center;
+    padding-top: 3rem;
+    background-color: #2b2c34;
+    height: 100%;
+    font-family: 'Open Sans', sans-serif;
+    color: #fffffe;
+    font-size: 50px;
+    font-weight: 100; }
+  .section .section-2 .submenu {
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+    .section .section-2 .submenu a {
+      text-decoration: none;
+      color: #ffffff;
+      font-weight: bold;
+      font-family: 'Open sans', sans-serif;
+      margin: 0% 1% 0% 1%; }
+  .section .section-1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    height: 100%;
+    flex-direction: column; }
+    .section .section-1 .profile-photo {
+      display: inline-block;
+      position: relative;
+      width: 300px;
+      height: 300px;
+      overflow: hidden;
+      border-radius: 50%; }
+      .section .section-1 .profile-photo img {
+        width: auto;
+        height: 100%;
+        margin-left: -25%; }
+    .section .section-1 .name {
+      font-size: 30px;
+      color: #2b2c34;
+      display: flex;
+      justify-content: center;
+      font-family: 'Bellota Text', cursive;
+      margin-top: 5%;
+      font-weight: 700; }
+    .section .section-1 p {
+      margin-top: 4%;
+      font-size: 1.2rem;
+      color: #2b2c34;
+      font-family: 'Open Sans', sans-serif;
+      text-align: justify;
+      margin: 2% 20% 0% 20%; }
+
+/*# sourceMappingURL=style.css.map */
