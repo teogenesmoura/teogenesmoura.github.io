@@ -4,13 +4,23 @@ html {
 body {
   margin: 0;
   padding: 0;
-  height: 100%; }
+  height: 100%;
+  background: linear-gradient(-45deg, #020024 0%, #6246ea 0%, #ff6e6c 63%, #00d4ff 100%);
+  background-size: 400% 400%;
+  animation: gradient 15s ease infinite; }
 
-a {
-  margin: 0 10px 0 10px;
-  text-decoration: none;
-  color: black; }
-
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%; }
+  50% {
+    background-position: 100% 50%; }
+  100% {
+    background-position: 0% 50%; } }
+@keyframes fadeInOpacity {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
 .fade-in {
   opacity: 1;
   animation-name: fadeInOpacity;
@@ -18,11 +28,11 @@ a {
   animation-timing-function: ease-in;
   animation-duration: 1.5s; }
 
-@keyframes fadeInOpacity {
-  0% {
-    opacity: 0; }
-  100% {
-    opacity: 1; } }
+a {
+  margin: 0 10px 0 10px;
+  text-decoration: none;
+  color: black; }
+
 .menu {
   display: flex;
   align-items: center;
@@ -30,6 +40,7 @@ a {
   flex-wrap: wrap; }
 
 nav {
+  display: flex;
   width: 100%;
   margin-top: 2%;
   text-align: center;
@@ -40,27 +51,24 @@ nav {
   font-size: 1.3rem;
   font-family: 'Open Sans', sans-serif; }
   nav a {
+    color: #fffffe;
     justify-content: center;
     text-align: center;
     align-items: center; }
 
 .section {
-  background-color: #fffffe;
   height: 100%; }
-  .section .section-2 .title {
-    display: flex;
-    justify-content: center;
-    padding-top: 3rem;
-    background-color: #2b2c34;
-    height: 100%;
-    font-family: 'Open Sans', sans-serif;
-    color: #fffffe;
-    font-size: 50px;
-    font-weight: 100; }
-  .section .section-2 .submenu {
-    display: flex;
-    justify-content: center;
-    align-items: center; }
+  .section .section-2 {
+    background-color: #fffffe;
+    height: 100%; }
+    .section .section-2 .title {
+      display: flex;
+      justify-content: center;
+      padding-top: 3rem;
+      font-family: 'Open Sans', sans-serif;
+      color: #fffffe;
+      font-size: 50px;
+      font-weight: 100; }
     .section .section-2 .submenu a {
       text-decoration: none;
       color: #ffffff;
@@ -73,33 +81,43 @@ nav {
     align-items: center;
     flex-wrap: wrap;
     height: 100%;
-    flex-direction: column; }
+    flex-direction: column;
+    color: #fffffe; }
+    .section .section-1 a {
+      background-color: #FFFFFe;
+      color: #ff6e6c;
+      font-size: 18px;
+      font-weight: 700;
+      font-family: 'Open Sans', sans-serif;
+      padding: 0.5rem 1rem 0.5rem 1rem;
+      margin-top: 2rem; }
     .section .section-1 .flex-photo {
       margin-top: -10%; }
     .section .section-1 .profile-photo {
       display: inline-block;
       position: relative;
-      width: 300px;
-      height: 300px;
+      width: 200px;
+      height: 200px;
       overflow: hidden;
-      border-radius: 50%; }
+      border-radius: 50%;
+      margin-bottom: 2%; }
       .section .section-1 .profile-photo img {
         width: auto;
         height: 100%;
         margin-left: -25%; }
     .section .section-1 .name {
       font-size: 30px;
-      color: #2b2c34;
+      color: #fffffe;
       display: flex;
       justify-content: center;
       font-family: 'Bellota Text', cursive;
       margin-top: 2%;
       font-weight: 700; }
     .section .section-1 p {
-      margin-top: 5%;
-      font-size: 1.2rem;
+      padding-top: 1rem;
+      font-size: 1rem;
       line-height: 1.8;
-      color: #2b2c34;
+      color: #fffffe;
       font-family: 'Open Sans', sans-serif;
       text-align: justify;
       margin: 1% 15% 0% 15%; }
