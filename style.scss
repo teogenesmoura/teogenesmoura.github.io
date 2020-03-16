@@ -3,6 +3,23 @@ $paragraph: #2b2c34;
 $button: #6246ea;
 $button-text: #fffffe;
 
+
+html {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+a {
+  margin: 0 10px 0 10px;
+  text-decoration: none;
+  color: black;
+}
+
 .fade-in {
 opacity: 1;
 animation-name: fadeInOpacity;
@@ -26,7 +43,6 @@ animation-duration: 1.5s;
   flex-wrap: wrap;
 }
 nav {
-  position: fixed;
   width: 100%;
   margin-top: 2%;
   text-align: center;
@@ -42,23 +58,6 @@ nav {
       align-items: center;
   }  
 }
-
-a {
-  margin: 0 10px 0 10px;
-  text-decoration: none;
-  color: black;
-}
-
-html {
-  height: 100%;
-}
-
-body {
-  margin: 0;
-  padding: 0;
-  height: 100%;
-}
-
 
 .section {
   background-color: #fffffe;
@@ -98,6 +97,9 @@ body {
       flex-wrap: wrap;
       height: 100%;
       flex-direction: column;
+      & .flex-photo {
+        margin-top: -10%;
+      }
       & .profile-photo {
         display:inline-block;
         position: relative;
@@ -117,16 +119,17 @@ body {
           display: flex;
           justify-content: center;
           font-family: 'Bellota Text', cursive;
-          margin-top: 5%;
+          margin-top: 2%;
           font-weight: 700;
       }
       & p {
-          margin-top: 4%;
+          margin-top: 5%;
           font-size: 1.2rem;
+          line-height: 1.8;
           color: $headline;
           font-family: 'Open Sans', sans-serif;
           text-align: justify;
-          margin: 2% 20% 0% 20%;
+          margin: 1% 15% 0% 15%;
       }
   }
 }
